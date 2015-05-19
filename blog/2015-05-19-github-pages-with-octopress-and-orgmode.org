@@ -1,0 +1,18 @@
+#+TITLE: GitHub Pages with Octopress and orgmode
+#+DATE: 2015-05-22
+#+SETUPFILE: ~/Dropbox/Docs/org/octopress.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES:
+#+JEKYLL_PUBLISHED: false
+
+Octopress と orgmode と GitHub Pages でブログ環境を構築する
+
+{{{more}}}
+
+* org-octopress
+- GitHub
+  - https://github.com/yoshinari-nomura/org-octopress
+- 日本語解説
+  - http://quickhack.net/nom/blog/2013-05-01-org-octopress.html
+* Theme
+- https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes

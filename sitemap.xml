@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://knmsyk.github.io/blog/2015-05-21-vim-commands.html</loc>
+    <loc>http://knmsyk.github.io/blog/2015-05-21-vim-commands.html</loc>
     <lastmod>2015-05-21T00:00:00+09:00</lastmod>
   </url>
   <url>
-    <loc>https://knmsyk.github.io/blog/2015-05-19-machine-learning.html</loc>
+    <loc>http://knmsyk.github.io/blog/2015-05-19-machine-learning.html</loc>
     <lastmod>2015-05-19T00:00:00+09:00</lastmod>
   </url>
   <url>
-    <loc>https://knmsyk.github.io/blog/archives/</loc>
+    <loc>http://knmsyk.github.io/blog/archives/</loc>
   </url>
   <url>
-    <loc>https://knmsyk.github.io/archives/</loc>
+    <loc>http://knmsyk.github.io/archives/</loc>
   </url>
   <url>
-    <loc>https://knmsyk.github.io/blog/</loc>
+    <loc>http://knmsyk.github.io/blog/</loc>
   </url>
   <url>
-    <loc>https://knmsyk.github.io/</loc>
+    <loc>http://knmsyk.github.io/</loc>
   </url>
   <url>
-    <loc>https://knmsyk.github.io/blog/categories/machinelearning/</loc>
+    <loc>http://knmsyk.github.io/blog/categories/machinelearning/</loc>
   </url>
   <url>
-    <loc>https://knmsyk.github.io/blog/categories/vim/</loc>
+    <loc>http://knmsyk.github.io/blog/categories/vim/</loc>
   </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[Lots of imagenation..]]></title>
   <link href="http://knmsyk.github.io/atom.xml" rel="self"/>
   <link href="http://knmsyk.github.io/"/>
-  <updated>2015-05-25T03:24:21+09:00</updated>
+  <updated>2015-05-25T03:25:52+09:00</updated>
   <id>http://knmsyk.github.io/</id>
   <author>
     <name><![CDATA[knmsyk]]></name>
@@ -19,7 +19,7 @@
     <updated>2015-05-25T00:00:00+09:00</updated>
     <id>http://knmsyk.github.io/blog/clean-.emacs-with-use-package-and-init-loader</id>
     <content type="html"><![CDATA[<p>
-emacs の起動が遅くなっていたので <a href="https://github.com/jwiegley/use-package">use-package</a> と <a href="https://github.com/emacs-jp/init-loader">init-loader</a> をいれて .emacs を整理してみた。
+emacs の起動が遅くなっていたので <a href="https://github.com/jwiegley/use-package">use-package</a> と <a href="https://github.com/emacs-jp/init-loader">init-loader</a> をいれて <a href="https://github.com/knmsyk/dot-emacs">.emacs</a> を整理してみた。
 </p>
 
 <p>
@@ -50,6 +50,9 @@ autoload なんちゃらという記述をしなくても lazy load してくれ
 <div class="outline-text-2" id="text-3">
 <p>
 これについては、前々から知ってはいたけどあまりファイル数が増えて逆にメンテしづらくなりそうだったので、入れていなかった。
+</p>
+
+<p>
 しかし、試しに入れてみると、ファイルごとの読み込み時間のログが見れたり、特に設定ファイルを編集しなくても init-loader の読み込みターゲット内であれば、ファイル分割がすぐにできて便利。
 </p>
 </div>
@@ -123,17 +126,12 @@ autoload なんちゃらという記述をしなくても lazy load してくれ
 <tbody>
 <tr>
 <td class="left">C-c .</td>
-<td class="left">タイムスタンプ</td>
+<td class="left">Timestamp</td>
 </tr>
 
 <tr>
 <td class="left">C-c /</td>
-<td class="left">Tree 絞り込む</td>
-</tr>
-
-<tr>
-<td class="left">&#xa0;</td>
-<td class="left">&#xa0;</td>
+<td class="left">Filter document tree</td>
 </tr>
 </tbody>
 </table>

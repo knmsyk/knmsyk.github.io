@@ -38,7 +38,7 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j $$
 - Multivariable model
   - $\hx = \theta_0 + \theta_1 x_1 + ... + \theta_n x_n = \ve \theta^\T \ve x$
 ** Normal equation (NE)
-- Method to solve for \theta analytically
+- MeThod to solve for \theta analytically
 - Set: $J ( \theta ) = 0$
 - Design matrix: $X = \left[ \ve x^{(1)^\T}; \ve x^{(2)^\T}; ... ; \ve x^{(m)^\T} \right] \in \R^{m \times n}$
 - $\theta = ( X^\T X )^{-1} X^\T y$
@@ -241,6 +241,3 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 * Recommendar system
 ** Collaborative filtering
 * Large scale machine learning
-
-
-{{{more}}}

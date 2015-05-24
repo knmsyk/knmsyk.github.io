@@ -1,0 +1,36 @@
+#+TITLE: Clean .emacs with use-package and init-loader
+#+DATE: 2015-05-25
+#+SETUPFILE: ~/Dropbox/Docs/org/octopress.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES:
+#+JEKYLL_PUBLISHED: true
+
+emacs の起動が遅くなっていたので [[https://github.com/jwiegley/use-package][use-package]] と [[https://github.com/emacs-jp/init-loader][init-loader]] をいれて .emacs を整理してみた。
+
+{{{more}}}
+
+** 方針
+方針としてはできるだけ設定ファイルは小さくしたい。
+
+** use-package
+simple な syntax でパッケージの設定ができる。
+autoload なんちゃらという記述をしなくても lazy load してくれる。
+
+** init-loader
+これについては、前々から知ってはいたけどあまりファイル数が増えて逆にメンテしづらくなりそうだったので、入れていなかった。
+しかし、試しに入れてみると、ファイルごとの読み込み時間のログが見れたり、特に設定ファイルを編集しなくても init-loader の読み込みターゲット内であれば、ファイル分割がすぐにできて便利。
+
+** 参考
+- .emacs を use-package で整理中
+  - http://papaeye.tumblr.com/post/105186649801/emacs-use-package
+- emacs use-package.el : Emacsの世界的権威が行っている最先端ラクラクinit.el整理術
+  - http://rubikitch.com/2014/09/09/use-package/
+- use-packageで可読性の高いinit.elを書く
+  - http://qiita.com/kai2nenobu/items/5dfae3767514584f5220
+- https://github.com/bdd/.emacs.d/blob/master/packages.el
+- https://github.com/noahfrederick/dots/blob/master/emacs.d/emacs.org
+- https://github.com/rejeep/emacs/blob/master/osx.el
+
+** 残りのタスク
+- [ ] yasnippet のロードがなぜか起動時におこなわれるのを yas コマンド実行時に評価されるように修正
+- [ ] org-mode で cua-mode を使えるように修正

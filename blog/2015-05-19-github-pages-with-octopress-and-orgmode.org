@@ -15,4 +15,5 @@ Octopress と orgmode と GitHub Pages でブログ環境を構築する
 - 日本語解説
   - http://quickhack.net/nom/blog/2013-05-01-org-octopress.html
 * Theme
+- https://github.com/lucaslew/whitespace
 - https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes

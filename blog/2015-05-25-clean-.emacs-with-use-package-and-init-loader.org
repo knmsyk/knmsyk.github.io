@@ -5,7 +5,7 @@
 #+JEKYLL_CATEGORIES:
 #+JEKYLL_PUBLISHED: true
 
-emacs の起動が遅くなっていたので [[https://github.com/jwiegley/use-package][use-package]] と [[https://github.com/emacs-jp/init-loader][init-loader]] をいれて .emacs を整理してみた。
+emacs の起動が遅くなっていたので [[https://github.com/jwiegley/use-package][use-package]] と [[https://github.com/emacs-jp/init-loader][init-loader]] をいれて [[https://github.com/knmsyk/dot-emacs][.emacs]] を整理してみた。
 
 {{{more}}}
 
@@ -18,6 +18,7 @@ autoload なんちゃらという記述をしなくても lazy load してくれ
 
 ** init-loader
 これについては、前々から知ってはいたけどあまりファイル数が増えて逆にメンテしづらくなりそうだったので、入れていなかった。
+
 しかし、試しに入れてみると、ファイルごとの読み込み時間のログが見れたり、特に設定ファイルを編集しなくても init-loader の読み込みターゲット内であれば、ファイル分割がすぐにできて便利。
 
 ** 参考

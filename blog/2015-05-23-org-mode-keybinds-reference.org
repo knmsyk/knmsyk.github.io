@@ -5,8 +5,7 @@
 #+JEKYLL_CATEGORIES:
 #+JEKYLL_PUBLISHED: true
 
-| key   | description    |
-|-------+----------------|
-| C-c . | タイムスタンプ |
-| C-c / | Tree 絞り込む  |
-|       |                |
+| key   | description          |
+|-------+----------------------|
+| C-c . | Timestamp            |
+| C-c / | Filter document tree |

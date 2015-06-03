@@ -2,7 +2,7 @@
 #+DATE: 2015-06-03
 #+SETUPFILE: ~/Dropbox/Docs/org/octopress.org
 #+JEKYLL_LAYOUT: post
-#+JEKYLL_CATEGORIES:
+#+JEKYLL_CATEGORIES: kotlin android memo
 #+JEKYLL_PUBLISHED: true
 
 [[http://kotlinlang.org/docs/reference/][Kotlin の公式 Reference]] を読みながら気になったところをまとめる
@@ -50,7 +50,8 @@ fun foo() {
     print(it)
   }
 }
-
+```
+``` kotlin
 fun outer() {
   fun inner() {
     return@outer // the label @outer was defined automatically

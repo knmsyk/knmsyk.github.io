@@ -2,10 +2,20 @@
 #+DATE: 2015-06-03
 #+SETUPFILE: ~/Dropbox/Docs/org/octopress.org
 #+JEKYLL_LAYOUT: post
-#+JEKYLL_CATEGORIES:
+#+JEKYLL_CATEGORIES: octopress
 #+JEKYLL_PUBLISHED: true
 
+* Basic usage
 1. Set up [[https://github.com/yoshinari-nomura/org-octopress][org-octopress]]
 2. Write your post with 'org-octopress-new-post' command
 3. Command with 'C-c C-e P x' and type 'octopress' for project to export a HTML file
-4. Go to octopress root directory and 'rake gen_deploy'
+4. Go to octopress root directory and, 'rake preview' or 'rake gen_deploy'
+
+* Code highlighting
+# ``` [language] [title] [url] [link text]
+# code snippet
+# ```
+- Ref
+  - http://octopress.org/docs/blogging/code/
+  - Language name list
+    - http://pygments.org/docs/lexers/

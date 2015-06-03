@@ -5,7 +5,7 @@
 #+JEKYLL_CATEGORIES:
 #+JEKYLL_PUBLISHED: true
 
-Kotlin の 気になったところをまとめる
+[[http://kotlinlang.org/docs/reference/][Kotlin の公式 Reference]] を読みながら気になったところをまとめる
 
 {{{more}}}
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Lots of imagenation..]]></title>
   <link href="http://knmsyk.github.io/atom.xml" rel="self"/>
   <link href="http://knmsyk.github.io/"/>
-  <updated>2015-06-03T22:42:21+09:00</updated>
+  <updated>2015-06-03T22:43:53+09:00</updated>
   <id>http://knmsyk.github.io/</id>
   <author>
     <name><![CDATA[knmsyk]]></name>
@@ -37,7 +37,7 @@
     <updated>2015-06-03T00:00:00+09:00</updated>
     <id>http://knmsyk.github.io/blog/kotlin</id>
     <content type="html"><![CDATA[<p>
-Kotlin の 気になったところをまとめる
+<a href="http://kotlinlang.org/docs/reference/">Kotlin の公式 Reference</a> を読みながら気になったところをまとめる
 </p>
 
 <p>

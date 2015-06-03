@@ -235,24 +235,19 @@ var mutable: Double? = 2 &hellip;">
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
 </pre></td><td class='code'><pre><code class='kotlin'><span class='line'><span class="k">fun</span> <span class="nf">foo</span><span class="p">()</span> <span class="p">{</span>
 </span><span class='line'>  <span class="n">ints</span><span class="p">.</span><span class="n">forEach</span> <span class="p">{</span>
 </span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">it</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="k">return</span><span class="n">@forEach</span>
 </span><span class='line'>    <span class="n">print</span><span class="p">(</span><span class="n">it</span><span class="p">)</span>
 </span><span class='line'>  <span class="p">}</span>
 </span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="p">&lt;/</span><span class="n">p</span><span class="p">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="p">&lt;</span><span class="n">p</span><span class="p">&gt;</span>
-</span><span class='line'><span class="k">fun</span> <span class="nf">outer</span><span class="p">()</span> <span class="p">{</span>
+</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='kotlin'><span class='line'><span class="k">fun</span> <span class="nf">outer</span><span class="p">()</span> <span class="p">{</span>
 </span><span class='line'>  <span class="k">fun</span> <span class="nf">inner</span><span class="p">()</span> <span class="p">{</span>
 </span><span class='line'>    <span class="k">return</span><span class="n">@outer</span> <span class="c1">// the label @outer was defined automatically</span>
 </span><span class='line'>  <span class="p">}</span>
@@ -289,6 +284,12 @@ var mutable: Double? = 2 &hellip;">
 <time class='entry-date' datetime='2015-06-03'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2015</span></span> <span class='time'>12:00 am</span></time>
       
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>android</a>, <a class='category' href='/blog/categories/kotlin/'>kotlin</a>, <a class='category' href='/blog/categories/memo/'>memo</a>
+  
+</span>
 
 
     </p>

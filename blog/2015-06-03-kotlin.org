@@ -1,0 +1,24 @@
+#+TITLE: Kotlin
+#+DATE: 2015-06-03
+#+SETUPFILE: ~/Dropbox/Docs/org/octopress.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES:
+#+JEKYLL_PUBLISHED: true
+
+Kotlin の 気になったところをまとめる
+
+{{{more}}}
+
+* Getting stated
+*** Basic syntax
+***** Defining local variables
+#+begin_src kotlin
+val immutable: Int = 1
+var mutable: Double? = 2
+#+end_src
+* Basics
+
+** Basic types
+- http://kotlinlang.org/docs/reference/basic-types.html
+- nullable な number や generics は boxing される
+  - これらは identity が

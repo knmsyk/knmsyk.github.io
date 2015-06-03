@@ -12,13 +12,48 @@ Kotlin の 気になったところをまとめる
 * Getting stated
 *** Basic syntax
 ***** Defining local variables
-#+begin_src kotlin
+``` kotlin
 val immutable: Int = 1
 var mutable: Double? = 2
-#+end_src
+```
 * Basics
 
 ** Basic types
 - http://kotlinlang.org/docs/reference/basic-types.html
-- nullable な number や generics は boxing される
-  - これらは identity が
+- generics や nullable な number は boxing される
+*** triple quote
+- raw text を生成する
+``` kotlin
+val text = """
+  for (c in "foo")
+    print(c)
+"""
+```
+*** Return and jumps
+***** Break and Continue Labels
+- Labeling
+
+``` kotlin
+loop@ for (i in 1..100) {
+  for (j in 1..100) {
+    if (...)
+      break@loop
+  }
+}
+```
+
+- Automatic labeling
+``` kotlin
+fun foo() {
+  ints.forEach {
+    if (it == 0) return@forEach
+    print(it)
+  }
+}
+
+fun outer() {
+  fun inner() {
+    return@outer // the label @outer was defined automatically
+  }
+}
+```

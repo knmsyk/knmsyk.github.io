@@ -1,5 +1,5 @@
 #+TITLE: Kotlin
-#+DATE: 2015-06-03
+#+DATE: 2015-06-03 22:01
 #+SETUPFILE: ~/Dropbox/Docs/org/octopress.org
 #+JEKYLL_LAYOUT: post
 #+JEKYLL_CATEGORIES: kotlin android memo

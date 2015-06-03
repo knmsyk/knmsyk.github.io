@@ -4,7 +4,7 @@
   <title><![CDATA[Lots of imagenation..]]></title>
   <link href="http://knmsyk.github.io/atom.xml" rel="self"/>
   <link href="http://knmsyk.github.io/"/>
-  <updated>2015-06-03T22:47:34+09:00</updated>
+  <updated>2015-06-03T22:52:12+09:00</updated>
   <id>http://knmsyk.github.io/</id>
   <author>
     <name><![CDATA[knmsyk]]></name>
@@ -14,27 +14,9 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Octopress With Org-mode]]></title>
-    <link href="http://knmsyk.github.io/blog/2015-06-03-octopress-with-org-mode.html"/>
-    <updated>2015-06-03T00:00:00+09:00</updated>
-    <id>http://knmsyk.github.io/blog/octopress-with-org-mode</id>
-    <content type="html"><![CDATA[<ol class="org-ol">
-<li>Set up <a href="https://github.com/yoshinari-nomura/org-octopress">org-octopress</a>
-</li>
-<li>Write your post with 'org-octopress-new-post' command
-</li>
-<li>Command with 'C-c C-e P x' and type 'octopress' for project to export a HTML file
-</li>
-<li>Go to octopress root directory and 'rake gen_deploy'
-</li>
-</ol>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Kotlin]]></title>
     <link href="http://knmsyk.github.io/blog/2015-06-03-kotlin.html"/>
-    <updated>2015-06-03T00:00:00+09:00</updated>
+    <updated>2015-06-03T22:01:00+09:00</updated>
     <id>http://knmsyk.github.io/blog/kotlin</id>
     <content type="html"><![CDATA[<p>
 <a href="http://kotlinlang.org/docs/reference/">Kotlin の公式 Reference</a> を読みながら気になったところをまとめる
@@ -159,6 +141,24 @@
 </div>
 </div>
 </div>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress With Org-mode]]></title>
+    <link href="http://knmsyk.github.io/blog/2015-06-03-octopress-with-org-mode.html"/>
+    <updated>2015-06-03T00:00:00+09:00</updated>
+    <id>http://knmsyk.github.io/blog/octopress-with-org-mode</id>
+    <content type="html"><![CDATA[<ol class="org-ol">
+<li>Set up <a href="https://github.com/yoshinari-nomura/org-octopress">org-octopress</a>
+</li>
+<li>Write your post with 'org-octopress-new-post' command
+</li>
+<li>Command with 'C-c C-e P x' and type 'octopress' for project to export a HTML file
+</li>
+<li>Go to octopress root directory and 'rake gen_deploy'
+</li>
+</ol>
 ]]></content>
   </entry>
   

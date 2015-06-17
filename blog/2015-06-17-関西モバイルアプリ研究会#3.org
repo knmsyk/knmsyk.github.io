@@ -1,0 +1,26 @@
+#+TITLE: 関西モバイルアプリ研究会#3
+#+DATE: 2015-06-17
+#+SETUPFILE: ~/Dropbox/Docs/org/octopress.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES:
+#+JEKYLL_PUBLISHED: true
+
+参加した。
+今回は、Google I/O ･ WWDC 特別会。
+iOS と Android でテーブルをわけての開催。
+自分は、テーブルの間で、興味のあるトピックによって、向きを変える。
+
+{{{more}}}
+
+* Swift2
+- defer うれしい <- Go
+- guard うれしい
+- Error handling
+  - Error を返しているわけではない
+  - objc の withError のようなもの
+* Watch OS2
+- もっと基本的なところ（起動スピードとか）のパフォーマンスを改善してほしい
+- で、これで何をする？
+* API diffs
+- https://developer.apple.com/library/prerelease/ios/releasenotes/General/iOS90APIDiffs/index.html
+- What's new https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://knmsyk.github.io/blog/2015-06-11-autolayout-for-ios7-in-ios8.html</loc>
+    <lastmod>2015-06-11T00:00:00+09:00</lastmod>
+  </url>
+  <url>
     <loc>http://knmsyk.github.io/blog/2015-06-03-octopress-date-format.html</loc>
     <lastmod>2015-06-03T23:50:00+09:00</lastmod>
   </url>
@@ -23,6 +27,10 @@
   <url>
     <loc>http://knmsyk.github.io/blog/2015-05-21-vim-commands.html</loc>
     <lastmod>2015-05-21T00:00:00+09:00</lastmod>
+  </url>
+  <url>
+    <loc>http://knmsyk.github.io/blog/2015-05-20-quick+nimble-for-objective-c-project.html</loc>
+    <lastmod>2015-05-20T00:00:00+09:00</lastmod>
   </url>
   <url>
     <loc>http://knmsyk.github.io/blog/2015-05-19-machine-learning.html</loc>

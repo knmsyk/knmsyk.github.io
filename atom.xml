@@ -4,7 +4,7 @@
   <title><![CDATA[Lots of imagenation..]]></title>
   <link href="http://knmsyk.github.io/atom.xml" rel="self"/>
   <link href="http://knmsyk.github.io/"/>
-  <updated>2015-06-04T00:45:54+09:00</updated>
+  <updated>2015-06-17T19:24:00+09:00</updated>
   <id>http://knmsyk.github.io/</id>
   <author>
     <name><![CDATA[knmsyk]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[AutoLayout for iOS7 in iOS8]]></title>
+    <link href="http://knmsyk.github.io/blog/2015-06-11-autolayout-for-ios7-in-ios8.html"/>
+    <updated>2015-06-11T00:00:00+09:00</updated>
+    <id>http://knmsyk.github.io/blog/autolayout-for-ios7-in-ios8</id>
+    <content type="html"><![CDATA[<p>
+iOS8 では問題なくレイアウトされていたけど、iOS7 で動かしたら下記のエラーでクラッシュした。
+"NSInternalInconsistencyException Auto Layout still required after sending -viewDidLayoutSubviews to the view controller"
+</p>
+
+<p>
+対策は、viewDidLayoutSubviews の最後に下記を追加する。
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="nb">self</span><span class="p">.</span><span class="n">view</span> <span class="n">layoutIfNeeded</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+</p>
+
+<p>
+もし UILabel のレイアウトを先に更新しておきたい場合は、下記をさきによんでおく。
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">label</span> <span class="n">layoutIfNeeded</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Ref</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Autolayout and subviews
+<ul class="org-ul">
+<li><a href="http://stackoverflow.com/questions/18429728/autolayout-and-subviews">http://stackoverflow.com/questions/18429728/autolayout-and-subviews</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress Date Format]]></title>
@@ -247,16 +287,28 @@ date format の設定方法と Post 一覧で時刻を消して日付のみを�
     <link href="http://knmsyk.github.io/blog/2015-05-25-clean-.emacs-with-use-package-and-init-loader.html"/>
     <updated>2015-05-25T00:00:00+09:00</updated>
     <id>http://knmsyk.github.io/blog/clean-.emacs-with-use-package-and-init-loader</id>
-    <content type="html"><![CDATA[<p>
+    <content type="html"><![CDATA[<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. 方針</a></li>
+<li><a href="#sec-2">2. use-package</a></li>
+<li><a href="#sec-3">3. init-loader</a></li>
+<li><a href="#sec-4">4. 参考</a></li>
+<li><a href="#sec-5">5. 残りのタスク</a></li>
+</ul>
+</div>
+</div>
+<p>
 emacs の起動が遅くなっていたので <a href="https://github.com/jwiegley/use-package">use-package</a> と <a href="https://github.com/emacs-jp/init-loader">init-loader</a> をいれて <a href="https://github.com/knmsyk/dot-emacs">.emacs</a> を整理してみた。
 </p>
 
 <p>
-<!-- more -->
+
 </p>
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">方針</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> 方針</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 方針としてはできるだけ設定ファイルは小さくしたい。
@@ -265,7 +317,7 @@ emacs の起動が遅くなっていたので <a href="https://github.com/jwiegl
 </div>
 
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">use-package</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> use-package</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 simple な syntax でパッケージの設定ができる。
@@ -275,7 +327,7 @@ autoload なんちゃらという記述をしなくても lazy load してくれ
 </div>
 
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">init-loader</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> init-loader</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 これについては、前々から知ってはいたけどあまりファイル数が増えて逆にメンテしづらくなりそうだったので、入れていなかった。
@@ -288,7 +340,7 @@ autoload なんちゃらという記述をしなくても lazy load してくれ
 </div>
 
 <div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">参考</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> 参考</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>.emacs を use-package で整理中
@@ -320,7 +372,7 @@ autoload なんちゃらという記述をしなくても lazy load してくれ
 </div>
 
 <div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5">残りのタスク</h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> 残りのタスク</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><code>[&#xa0;]</code> yasnippet のロードがなぜか起動時におこなわれるのを yas コマンド実行時に評価されるように修正
@@ -372,12 +424,38 @@ autoload なんちゃらという記述をしなくても lazy load してくれ
     <link href="http://knmsyk.github.io/blog/2015-05-21-vim-commands.html"/>
     <updated>2015-05-21T00:00:00+09:00</updated>
     <id>http://knmsyk.github.io/blog/vim-commands</id>
-    <content type="html"><![CDATA[<p>
+    <content type="html"><![CDATA[<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Reference</a></li>
+<li><a href="#sec-2">2. Move</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Cursor</a></li>
+<li><a href="#sec-2-2">2.2. Window</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Edit</a></li>
+<li><a href="#sec-4">4. Esc</a></li>
+<li><a href="#sec-5">5. Delete</a></li>
+<li><a href="#sec-6">6. Cut, Yank(Copy), and Paste</a></li>
+<li><a href="#sec-7">7. Undo and Redo</a></li>
+<li><a href="#sec-8">8. Select</a></li>
+<li><a href="#sec-9">9. Window</a></li>
+<li><a href="#sec-10">10. Buffer</a></li>
+<li><a href="#sec-11">11. Search</a></li>
+<li><a href="#sec-12">12. Replace</a></li>
+<li><a href="#sec-13">13. Open</a></li>
+<li><a href="#sec-14">14. Save</a></li>
+</ul>
+</div>
+</div>
+<p>
 vim コマンドを備忘録を兼ねてリファレンス的にまとめる
-<!-- more -->
+
 </p>
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Reference</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Reference</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Vimコマンド覚書
@@ -403,10 +481,10 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Move</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Move</h2>
 <div class="outline-text-2" id="text-2">
 </div><div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">Cursor</h3>
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Cursor</h3>
 <div class="outline-text-3" id="text-2-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -532,7 +610,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-2-2" class="outline-3">
-<h3 id="sec-2-2">Window</h3>
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Window</h3>
 <div class="outline-text-3" id="text-2-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -594,7 +672,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Edit</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Edit</h2>
 <div class="outline-text-2" id="text-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -684,7 +762,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">Esc</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Esc</h2>
 <div class="outline-text-2" id="text-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -710,7 +788,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5">Delete</h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> Delete</h2>
 <div class="outline-text-2" id="text-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -751,7 +829,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6">Cut, Yank(Copy), and Paste</h2>
+<h2 id="sec-6"><span class="section-number-2">6</span> Cut, Yank(Copy), and Paste</h2>
 <div class="outline-text-2" id="text-6">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -787,7 +865,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7">Undo and Redo</h2>
+<h2 id="sec-7"><span class="section-number-2">7</span> Undo and Redo</h2>
 <div class="outline-text-2" id="text-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -818,7 +896,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8">Select</h2>
+<h2 id="sec-8"><span class="section-number-2">8</span> Select</h2>
 <div class="outline-text-2" id="text-8">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -859,7 +937,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9">Window</h2>
+<h2 id="sec-9"><span class="section-number-2">9</span> Window</h2>
 <div class="outline-text-2" id="text-9">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -930,7 +1008,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10">Buffer</h2>
+<h2 id="sec-10"><span class="section-number-2">10</span> Buffer</h2>
 <div class="outline-text-2" id="text-10">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -951,7 +1029,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-11" class="outline-2">
-<h2 id="sec-11">Search</h2>
+<h2 id="sec-11"><span class="section-number-2">11</span> Search</h2>
 <div class="outline-text-2" id="text-11">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -987,7 +1065,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-12" class="outline-2">
-<h2 id="sec-12">Replace</h2>
+<h2 id="sec-12"><span class="section-number-2">12</span> Replace</h2>
 <div class="outline-text-2" id="text-12">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -1028,7 +1106,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-13" class="outline-2">
-<h2 id="sec-13">Open</h2>
+<h2 id="sec-13"><span class="section-number-2">13</span> Open</h2>
 <div class="outline-text-2" id="text-13">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -1104,7 +1182,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 
 <div id="outline-container-sec-14" class="outline-2">
-<h2 id="sec-14">Save</h2>
+<h2 id="sec-14"><span class="section-number-2">14</span> Save</h2>
 <div class="outline-text-2" id="text-14">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -1137,12 +1215,146 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Quick+Nimble for Objective-C Project]]></title>
+    <link href="http://knmsyk.github.io/blog/2015-05-20-quick+nimble-for-objective-c-project.html"/>
+    <updated>2015-05-20T00:00:00+09:00</updated>
+    <id>http://knmsyk.github.io/blog/quick+nimble-for-objective-c-project</id>
+    <content type="html"><![CDATA[<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Podfile</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Podfile に以下を追加する
+</p>
+
+<p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">pod</span> <span class="s1">&#39;AFNetworking&#39;</span><span class="p">,</span> <span class="s1">&#39;~&amp;gt; 2.5.4&#39;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;</span>
+</span><span class='line'><span class="sr">use_frameworks!</span>
+</span><span class='line'><span class="sr">pod &#39;Nimble&#39;, &#39;~&amp;gt; 1.0.0-rc.1&#39;</span>
+</span><span class='line'><span class="sr">pod &#39;Quick&#39;, &#39;~&amp;gt; 0.3.1&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+</p>
+
+<p>
+<!-- more -->
+</p>
+</div>
+</div>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Machine Learning]]></title>
     <link href="http://knmsyk.github.io/blog/2015-05-19-machine-learning.html"/>
     <updated>2015-05-19T00:00:00+09:00</updated>
     <id>http://knmsyk.github.io/blog/machine-learning</id>
-    <content type="html"><![CDATA[<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Link</h2>
+    <content type="html"><![CDATA[<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Link</a></li>
+<li><a href="#sec-2">2. Introduction</a>
+<ul>
+<li><a href="#sec-2-1">2.1. What is machine learning</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Supervised learning</a>
+<ul>
+<li><a href="#sec-3-1">3.1. What is supervised learning</a></li>
+<li><a href="#sec-3-2">3.2. Minimizing cost function</a></li>
+<li><a href="#sec-3-3">3.3. Gradient descent (GD)</a>
+<ul>
+<li><a href="#sec-3-3-1">3.3.1. Feature scaling</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-4">3.4. Linear regression</a></li>
+<li><a href="#sec-3-5">3.5. Normal equation (NE)</a>
+<ul>
+<li><a href="#sec-3-5-1">3.5.1. comparison GD and NE</a></li>
+<li><a href="#sec-3-5-2">3.5.2. non-invertivility</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-6">3.6. Classification</a>
+<ul>
+<li><a href="#sec-3-6-1">3.6.1. Logistic Regression (LR)</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-7">3.7. Regularization</a>
+<ul>
+<li><a href="#sec-3-7-1">3.7.1. What for?</a></li>
+<li><a href="#sec-3-7-2">3.7.2. Cost function</a></li>
+<li><a href="#sec-3-7-3">3.7.3. GD</a></li>
+<li><a href="#sec-3-7-4">3.7.4. NE</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Neural network</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Representation</a>
+<ul>
+<li><a href="#sec-4-1-1">4.1.1. Neuron model: Logistic unit</a></li>
+<li><a href="#sec-4-1-2">4.1.2. Forward propagation</a></li>
+<li><a href="#sec-4-1-3">4.1.3. Intuition</a></li>
+<li><a href="#sec-4-1-4">4.1.4. Multiclass classification</a></li>
+</ul>
+</li>
+<li><a href="#sec-4-2">4.2. Learning algorithm</a>
+<ul>
+<li><a href="#sec-4-2-1">4.2.1. Forward propagation</a></li>
+<li><a href="#sec-4-2-2">4.2.2. Backward propagation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Advice for implementing</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Evaluating a hypothesis</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1. Bias / Variance</a></li>
+<li><a href="#sec-5-1-2">5.1.2. Model selection</a></li>
+<li><a href="#sec-5-1-3">5.1.3. Cross validation</a></li>
+<li><a href="#sec-5-1-4">5.1.4. Regularization</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-2">5.2. ML System design</a>
+<ul>
+<li><a href="#sec-5-2-1">5.2.1. Precision and recall</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Support Vector Machine (SVM)</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Kernel</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Unsupervised learning</a>
+<ul>
+<li><a href="#sec-7-1">7.1. Dimensionality reduction</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. Anomaly detection</a></li>
+<li><a href="#sec-9">9. Recommendar system</a>
+<ul>
+<li><a href="#sec-9-1">9.1. Collaborative filtering</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10. Large scale machine learning</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Link</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><a href="https://class.coursera.org/ml/lecture/index">https://class.coursera.org/ml/lecture/index</a>
@@ -1151,10 +1363,10 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 </div>
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Introduction</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Introduction</h2>
 <div class="outline-text-2" id="text-2">
 </div><div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">What is machine learning</h3>
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> What is machine learning</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>New capability for computing without explicit programming.
@@ -1167,16 +1379,16 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </li>
 </ul>
 <p>
-<!-- more -->
+
 </p>
 </div>
 </div>
 </div>
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Supervised learning</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> Supervised learning</h2>
 <div class="outline-text-2" id="text-3">
 </div><div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1">What is supervised learning</h3>
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> What is supervised learning</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>To get a hypothesis, estimator or classifier of test samples (Task) from training samples (Experience).
@@ -1185,7 +1397,7 @@ vim コマンドを備忘録を兼ねてリファレンス的にまとめる
 </div>
 </div>
 <div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2">Minimizing cost function</h3>
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Minimizing cost function</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Choose coefficients &theta; so that hypothesis \(h (x)\) is close to output \(y\) of experience.
@@ -1201,7 +1413,7 @@ $$ J ( \theta ) = \sum_{i=1}^m ( \hxi ) - \yi )^2 $$
 </div>
 </div>
 <div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3">Gradient descent (GD)</h3>
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Gradient descent (GD)</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 repeat until convergence {
@@ -1231,9 +1443,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j $$
 </li>
 </ul>
 </div>
-<div id="outline-container-sec-3-4" class="outline-3">
-<h3 id="sec-3-4">Feature scaling</h3>
-<div class="outline-text-3" id="text-3-4">
+<div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> Feature scaling</h4>
+<div class="outline-text-4" id="text-3-3-1">
 <ul class="org-ul">
 <li>Make sure features are on a similar scale because non-scale features take long time to converge in GD.
 </li>
@@ -1243,9 +1455,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j $$
 </div>
 </div>
 </div>
-<div id="outline-container-sec-3-5" class="outline-3">
-<h3 id="sec-3-5">Linear regression</h3>
-<div class="outline-text-3" id="text-3-5">
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Linear regression</h3>
+<div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
 <li>Multivariable model
 <ul class="org-ul">
@@ -1256,9 +1468,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j $$
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-6" class="outline-3">
-<h3 id="sec-3-6">Normal equation (NE)</h3>
-<div class="outline-text-3" id="text-3-6">
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Normal equation (NE)</h3>
+<div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
 <li>MeThod to solve for &theta; analytically
 </li>
@@ -1270,9 +1482,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j $$
 </li>
 </ul>
 </div>
-<div id="outline-container-sec-3-7" class="outline-3">
-<h3 id="sec-3-7">comparison GD and NE</h3>
-<div class="outline-text-3" id="text-3-7">
+<div id="outline-container-sec-3-5-1" class="outline-4">
+<h4 id="sec-3-5-1"><span class="section-number-4">3.5.1</span> comparison GD and NE</h4>
+<div class="outline-text-4" id="text-3-5-1">
 <ul class="org-ul">
 <li>GD
 <ul class="org-ul">
@@ -1299,9 +1511,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j $$
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-8" class="outline-3">
-<h3 id="sec-3-8">non-invertivility</h3>
-<div class="outline-text-3" id="text-3-8">
+<div id="outline-container-sec-3-5-2" class="outline-4">
+<h4 id="sec-3-5-2"><span class="section-number-4">3.5.2</span> non-invertivility</h4>
+<div class="outline-text-4" id="text-3-5-2">
 <ul class="org-ul">
 <li>Reason. 1
 <ul class="org-ul">
@@ -1329,15 +1541,13 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j $$
 </div>
 </div>
 </div>
-<div id="outline-container-sec-3-9" class="outline-3">
-<h3 id="sec-3-9">Classification</h3>
-<div class="outline-text-3" id="text-3-9">
-</div><div id="outline-container-sec-3-10" class="outline-3">
-<h3 id="sec-3-10">Logistic Regression (LR)</h3>
-<div class="outline-text-3" id="text-3-10">
-</div><div id="outline-container-sec-3-10-1" class="outline-4">
-<h4 id="sec-3-10-1">hypothesis representation</h4>
-<div class="outline-text-4" id="text-3-10-1">
+<div id="outline-container-sec-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> Classification</h3>
+<div class="outline-text-3" id="text-3-6">
+</div><div id="outline-container-sec-3-6-1" class="outline-4">
+<h4 id="sec-3-6-1"><span class="section-number-4">3.6.1</span> Logistic Regression (LR)</h4>
+<div class="outline-text-4" id="text-3-6-1">
+</div><ol class="org-ol"><li><a id="sec-3-6-1-1" name="sec-3-6-1-1"></a>hypothesis representation<br  /><div class="outline-text-5" id="text-3-6-1-1">
 <p>
 $$ \hx = g( \theta^\T x ) = \dfrac{ 1 }{ 1 + e^{- \theta^\T x } } $$
 </p>
@@ -1354,13 +1564,9 @@ $$ \hx = g( \theta^\T x ) = \dfrac{ 1 }{ 1 + e^{- \theta^\T x } } $$
 </li>
 </ul>
 </div>
-</div>
-<div id="outline-container-sec-3-10-2" class="outline-4">
-<h4 id="sec-3-10-2">Decision boundary</h4>
-</div>
-<div id="outline-container-sec-3-10-3" class="outline-4">
-<h4 id="sec-3-10-3">Cost function</h4>
-<div class="outline-text-4" id="text-3-10-3">
+</li>
+<li><a id="sec-3-6-1-2" name="sec-3-6-1-2"></a>Decision boundary<br  /></li>
+<li><a id="sec-3-6-1-3" name="sec-3-6-1-3"></a>Cost function<br  /><div class="outline-text-5" id="text-3-6-1-3">
 <ul class="org-ul">
 <li>\(\hx\) is modeled by \(P(y = 1 | x; \theta)\). In Linear regression, \(y\) is Real number, on the otherhand, in Logistic regression, \(y\) is \(0\) or \(1\).
 <ul class="org-ul">
@@ -1410,13 +1616,8 @@ $$ \min \dfrac 1 m \sumim \left(- \yi \log ( \hxi ) - ( 1 - \yi ) \log ( 1 - \hx
 $$ \theta_j := \theta_j - \alpha \dfrac 1 m (\hxi - \yi) \xi_j $$
 </p>
 </div>
-</div>
-<div id="outline-container-sec-3-10-4" class="outline-4">
-<h4 id="sec-3-10-4">Multiclass classification</h4>
-<div class="outline-text-4" id="text-3-10-4">
-</div><div id="outline-container-sec-3-10-5" class="outline-4">
-<h4 id="sec-3-10-5">one-vs-all</h4>
-<div class="outline-text-4" id="text-3-10-5">
+</li>
+<li><a id="sec-3-6-1-4" name="sec-3-6-1-4"></a>Multiclass classification<br  /><ol class="org-ol"><li><a id="sec-3-6-1-4-1" name="sec-3-6-1-4-1"></a>one-vs-all<br  /><div class="outline-text-6" id="text-3-6-1-4-1">
 <ul class="org-ul">
 <li>\(\hcx\) : estimated probability that \(y = c\) on input \(x\)
 <ul class="org-ul">
@@ -1428,16 +1629,16 @@ $$ \theta_j := \theta_j - \alpha \dfrac 1 m (\hxi - \yi) \xi_j $$
 </li>
 </ul>
 </div>
+</li></ol>
+</li></ol>
 </div>
 </div>
-</div>
-</div>
-<div id="outline-container-sec-3-11" class="outline-3">
-<h3 id="sec-3-11">Regularization</h3>
-<div class="outline-text-3" id="text-3-11">
-</div><div id="outline-container-sec-3-12" class="outline-3">
-<h3 id="sec-3-12">What for?</h3>
-<div class="outline-text-3" id="text-3-12">
+<div id="outline-container-sec-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> Regularization</h3>
+<div class="outline-text-3" id="text-3-7">
+</div><div id="outline-container-sec-3-7-1" class="outline-4">
+<h4 id="sec-3-7-1"><span class="section-number-4">3.7.1</span> What for?</h4>
+<div class="outline-text-4" id="text-3-7-1">
 <ul class="org-ul">
 <li>over-fitting / under-fitting: fail to generative to new examples
 </li>
@@ -1466,9 +1667,9 @@ $$ \theta_j := \theta_j - \alpha \dfrac 1 m (\hxi - \yi) \xi_j $$
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-13" class="outline-3">
-<h3 id="sec-3-13">Cost function</h3>
-<div class="outline-text-3" id="text-3-13">
+<div id="outline-container-sec-3-7-2" class="outline-4">
+<h4 id="sec-3-7-2"><span class="section-number-4">3.7.2</span> Cost function</h4>
+<div class="outline-text-4" id="text-3-7-2">
 <p>
 $$ J(\theta) = \dfrac{1}{2m} \sumim ( \hxi ) - \yi )^2 + \lambda \sumjn \theta_j^2 $$
 </p>
@@ -1480,9 +1681,9 @@ $$ J(\theta) = \dfrac{1}{2m} \sumim ( \hxi ) - \yi )^2 + \lambda \sumjn \theta_j
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-14" class="outline-3">
-<h3 id="sec-3-14">GD</h3>
-<div class="outline-text-3" id="text-3-14">
+<div id="outline-container-sec-3-7-3" class="outline-4">
+<h4 id="sec-3-7-3"><span class="section-number-4">3.7.3</span> GD</h4>
+<div class="outline-text-4" id="text-3-7-3">
 <p>
 repeat until convergence {
  $$ \theta_j : = \theta_j - \alpha \pd{ \theta_j }{ J ( \theta ) } $$
@@ -1508,9 +1709,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-3-15" class="outline-3">
-<h3 id="sec-3-15">NE</h3>
-<div class="outline-text-3" id="text-3-15">
+<div id="outline-container-sec-3-7-4" class="outline-4">
+<h4 id="sec-3-7-4"><span class="section-number-4">3.7.4</span> NE</h4>
+<div class="outline-text-4" id="text-3-7-4">
 <ul class="org-ul">
 <li>suppose \(m \leq n (X \in \R^{m \times n}: \sharp examples \times \sharp featues)\) and \(\lambda > 0\)
 <ul class="org-ul">
@@ -1528,7 +1729,7 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </div>
 </div>
 <div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">Neural network</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Neural network</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>Nonlinear classification
@@ -1544,11 +1745,11 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </ul>
 </div>
 <div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1">Representation</h3>
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Representation</h3>
 <div class="outline-text-3" id="text-4-1">
-</div><div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2">Neuron model: Logistic unit</h3>
-<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1"><span class="section-number-4">4.1.1</span> Neuron model: Logistic unit</h4>
+<div class="outline-text-4" id="text-4-1-1">
 <ul class="org-ul">
 <li>Node
 <ul class="org-ul">
@@ -1589,9 +1790,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-4-3" class="outline-3">
-<h3 id="sec-4-3">Forward propagation</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2"><span class="section-number-4">4.1.2</span> Forward propagation</h4>
+<div class="outline-text-4" id="text-4-1-2">
 <ul class="org-ul">
 <li>Start from input layer
 </li>
@@ -1636,9 +1837,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-4-4" class="outline-3">
-<h3 id="sec-4-4">Intuition</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-sec-4-1-3" class="outline-4">
+<h4 id="sec-4-1-3"><span class="section-number-4">4.1.3</span> Intuition</h4>
+<div class="outline-text-4" id="text-4-1-3">
 <ul class="org-ul">
 <li>Output: \(y = h(\mat \Theta^\T \ve x)\), Input: \(\ve x = (x_1, x_2); x_1, x_2 \in \{ 0, 1 \}\)
 <ul class="org-ul">
@@ -1659,8 +1860,8 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="right">x_1</th>
-<th scope="col" class="right">x_2</th>
+<th scope="col" class="right">x<sub>1</sub></th>
+<th scope="col" class="right">x<sub>2</sub></th>
 <th scope="col" class="right">h</th>
 </tr>
 </thead>
@@ -1706,8 +1907,8 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="right">x_1</th>
-<th scope="col" class="right">x_2</th>
+<th scope="col" class="right">x<sub>1</sub></th>
+<th scope="col" class="right">x<sub>2</sub></th>
 <th scope="col" class="right">h</th>
 </tr>
 </thead>
@@ -1753,8 +1954,8 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="right">x_1</th>
-<th scope="col" class="right">x_2</th>
+<th scope="col" class="right">x<sub>1</sub></th>
+<th scope="col" class="right">x<sub>2</sub></th>
 <th scope="col" class="right">h</th>
 </tr>
 </thead>
@@ -1800,8 +2001,8 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="right">x_1</th>
-<th scope="col" class="right">x_2</th>
+<th scope="col" class="right">x<sub>1</sub></th>
+<th scope="col" class="right">x<sub>2</sub></th>
 <th scope="col" class="right">h</th>
 </tr>
 </thead>
@@ -1859,8 +2060,8 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="right">x_1</th>
-<th scope="col" class="right">x_2</th>
+<th scope="col" class="right">x<sub>1</sub></th>
+<th scope="col" class="right">x<sub>2</sub></th>
 <th scope="col" class="right">h</th>
 </tr>
 </thead>
@@ -1892,9 +2093,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </table>
 </div>
 </div>
-<div id="outline-container-sec-4-5" class="outline-3">
-<h3 id="sec-4-5">Multiclass classification</h3>
-<div class="outline-text-3" id="text-4-5">
+<div id="outline-container-sec-4-1-4" class="outline-4">
+<h4 id="sec-4-1-4"><span class="section-number-4">4.1.4</span> Multiclass classification</h4>
+<div class="outline-text-4" id="text-4-1-4">
 <ul class="org-ul">
 <li>one vs all
 </li>
@@ -1902,12 +2103,12 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </div>
 </div>
 </div>
-<div id="outline-container-sec-4-6" class="outline-3">
-<h3 id="sec-4-6">Learning algorithm</h3>
-<div class="outline-text-3" id="text-4-6">
-</div><div id="outline-container-sec-4-7" class="outline-3">
-<h3 id="sec-4-7">Forward propagation</h3>
-<div class="outline-text-3" id="text-4-7">
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Learning algorithm</h3>
+<div class="outline-text-3" id="text-4-2">
+</div><div id="outline-container-sec-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1"><span class="section-number-4">4.2.1</span> Forward propagation</h4>
+<div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li>Start from input layer
 </li>
@@ -1916,9 +2117,9 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-4-8" class="outline-3">
-<h3 id="sec-4-8">Backward propagation</h3>
-<div class="outline-text-3" id="text-4-8">
+<div id="outline-container-sec-4-2-2" class="outline-4">
+<h4 id="sec-4-2-2"><span class="section-number-4">4.2.2</span> Backward propagation</h4>
+<div class="outline-text-4" id="text-4-2-2">
 <ul class="org-ul">
 <li>Start form output layer
 </li>
@@ -1936,14 +2137,14 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </div>
 </div>
 <div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5">Advice for implementing</h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> Advice for implementing</h2>
 <div class="outline-text-2" id="text-5">
 </div><div id="outline-container-sec-5-1" class="outline-3">
-<h3 id="sec-5-1">Evaluating a hypothesis</h3>
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Evaluating a hypothesis</h3>
 <div class="outline-text-3" id="text-5-1">
-</div><div id="outline-container-sec-5-2" class="outline-3">
-<h3 id="sec-5-2">Bias / Variance</h3>
-<div class="outline-text-3" id="text-5-2">
+</div><div id="outline-container-sec-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> Bias / Variance</h4>
+<div class="outline-text-4" id="text-5-1-1">
 <ul class="org-ul">
 <li>Underfit
 <ul class="org-ul">
@@ -1960,22 +2161,22 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </ul>
 </div>
 </div>
-<div id="outline-container-sec-5-3" class="outline-3">
-<h3 id="sec-5-3">Model selection</h3>
+<div id="outline-container-sec-5-1-2" class="outline-4">
+<h4 id="sec-5-1-2"><span class="section-number-4">5.1.2</span> Model selection</h4>
 </div>
-<div id="outline-container-sec-5-4" class="outline-3">
-<h3 id="sec-5-4">Cross validation</h3>
+<div id="outline-container-sec-5-1-3" class="outline-4">
+<h4 id="sec-5-1-3"><span class="section-number-4">5.1.3</span> Cross validation</h4>
 </div>
-<div id="outline-container-sec-5-5" class="outline-3">
-<h3 id="sec-5-5">Regularization</h3>
+<div id="outline-container-sec-5-1-4" class="outline-4">
+<h4 id="sec-5-1-4"><span class="section-number-4">5.1.4</span> Regularization</h4>
 </div>
 </div>
-<div id="outline-container-sec-5-6" class="outline-3">
-<h3 id="sec-5-6">ML System design</h3>
-<div class="outline-text-3" id="text-5-6">
-</div><div id="outline-container-sec-5-7" class="outline-3">
-<h3 id="sec-5-7">Precision and recall</h3>
-<div class="outline-text-3" id="text-5-7">
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> ML System design</h3>
+<div class="outline-text-3" id="text-5-2">
+</div><div id="outline-container-sec-5-2-1" class="outline-4">
+<h4 id="sec-5-2-1"><span class="section-number-4">5.2.1</span> Precision and recall</h4>
+<div class="outline-text-4" id="text-5-2-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -2049,7 +2250,7 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </div>
 </div>
 <div id="outline-container-sec-6" class="outline-2">
-<h2 id="sec-6">Support Vector Machine (SVM)</h2>
+<h2 id="sec-6"><span class="section-number-2">6</span> Support Vector Machine (SVM)</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>Alternative view of logistic regression
@@ -2057,28 +2258,28 @@ $$ \pd{ \theta_j }{ J ( \theta ) } = \frac 1 m \sumim ( \hxi - \yi ) \xi_j + \df
 </ul>
 </div>
 <div id="outline-container-sec-6-1" class="outline-3">
-<h3 id="sec-6-1">Kernel</h3>
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Kernel</h3>
 </div>
 </div>
 <div id="outline-container-sec-7" class="outline-2">
-<h2 id="sec-7">Unsupervised learning</h2>
+<h2 id="sec-7"><span class="section-number-2">7</span> Unsupervised learning</h2>
 <div class="outline-text-2" id="text-7">
 </div><div id="outline-container-sec-7-1" class="outline-3">
-<h3 id="sec-7-1">Dimensionality reduction</h3>
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Dimensionality reduction</h3>
 </div>
 </div>
 <div id="outline-container-sec-8" class="outline-2">
-<h2 id="sec-8">Anomaly detection</h2>
+<h2 id="sec-8"><span class="section-number-2">8</span> Anomaly detection</h2>
 </div>
 <div id="outline-container-sec-9" class="outline-2">
-<h2 id="sec-9">Recommendar system</h2>
+<h2 id="sec-9"><span class="section-number-2">9</span> Recommendar system</h2>
 <div class="outline-text-2" id="text-9">
 </div><div id="outline-container-sec-9-1" class="outline-3">
-<h3 id="sec-9-1">Collaborative filtering</h3>
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> Collaborative filtering</h3>
 </div>
 </div>
 <div id="outline-container-sec-10" class="outline-2">
-<h2 id="sec-10">Large scale machine learning</h2>
+<h2 id="sec-10"><span class="section-number-2">10</span> Large scale machine learning</h2>
 </div>
 ]]></content>
   </entry>

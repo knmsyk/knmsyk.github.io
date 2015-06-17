@@ -1,0 +1,23 @@
+#+TITLE: AutoLayout for iOS7 in iOS8
+#+DATE: 2015-06-11
+#+SETUPFILE: ~/.emacs.d/octopress.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES:
+#+JEKYLL_PUBLISHED: true
+
+iOS8 では問題なくレイアウトされていたけど、iOS7 で動かしたら下記のエラーでクラッシュした。
+"NSInternalInconsistencyException Auto Layout still required after sending -viewDidLayoutSubviews to the view controller"
+
+対策は、viewDidLayoutSubviews の最後に下記を追加する。
+``` objc
+[self.view layoutIfNeeded];
+```
+
+もし UILabel のレイアウトを先に更新しておきたい場合は、下記をさきによんでおく。
+``` objc
+[label layoutIfNeeded];
+```
+
+* Ref
+- Autolayout and subviews
+  - http://stackoverflow.com/questions/18429728/autolayout-and-subviews

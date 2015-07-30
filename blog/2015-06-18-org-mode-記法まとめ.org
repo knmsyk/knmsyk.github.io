@@ -1,0 +1,24 @@
+#+TITLE: org-mode 記法まとめ
+#+DATE: 2015-06-18
+#+SETUPFILE: ~/Dropbox/Docs/org/octopress.org
+#+JEKYLL_LAYOUT: post
+#+JEKYLL_CATEGORIES:
+#+JEKYLL_PUBLISHED: true
+
+org-mode 記法の一覧をつくる
+
+{{{more}}}
+
+* Table
+```
+     | Name  | Phone | Age |
+     |-------+-------+-----|
+     | Peter |  1234 |  17 |
+     | Anna  |  4321 |  25 |
+```
+** separator
+```
+ |Name|Phone|Age|
+ |-
+```
+と入力して <TAB> で OK

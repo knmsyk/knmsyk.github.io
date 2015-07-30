@@ -16,8 +16,8 @@ iOS と Android でテーブルをわけての開催。
 - defer うれしい <- Go
 - guard うれしい
 - Error handling
-  - Error を返しているわけではない
-  - objc の withError のようなもの
+  - Exception を返しているわけではない
+  - objc の withError のようなものと理解すればよい
 * Watch OS2
 - もっと基本的なところ（起動スピードとか）のパフォーマンスを改善してほしい
 - で、これで何をする？

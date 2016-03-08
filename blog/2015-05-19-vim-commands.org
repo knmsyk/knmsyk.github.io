@@ -6,7 +6,7 @@
 #+JEKYLL_PUBLISHED: true
 
 vim コマンドを備忘録を兼ねてリファレンス的にまとめる
-{{{more}}}
+
 * Reference
 - Vimコマンド覚書
   - http://www.7key.jp/software/vi.html

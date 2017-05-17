@@ -1,29 +1,14 @@
-# README
-
 iOS/Android app developer
 
+-   macOS
+-   Emacs
 
-## Environment
+-   Swift
+-   Objective-C
+-   Java
+-   Elixir
+-   Ruby
+-   Racket
+-   Standard ML
 
--   Mac OS 10.10 (Yosemite)
--   Emacs 24.5
-
-
-## Languages
-
-1.  Ruby
-2.  Swift
-3.  Objective-C
-4.  Racket
-5.  Standard ML
-6.  Java
-7.  JavaScript
-8.  MATLAB
-9.  PHP
-10. C
-
-
-## Links
-
--   <https://knmsyk.github.io/>
--   <http://qiita.com/msyk>
+-   [knmsyk](https://twitter.com/knmsyk)

@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: http://knmsyk.github.io/sitemap.xml

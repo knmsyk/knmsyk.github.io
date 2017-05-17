@@ -1,3 +1,5 @@
+ #+HTML_HEAD: <style> img { width: 14px; }</style>
+
 iOS/Android app developer
 
 - macOS
@@ -13,4 +15,5 @@ iOS/Android app developer
 -  Standard ML
 
 
--   [[https://twitter.com/knmsyk][knmsyk]]
+- [[./gmail.png]] kounomasayuki
+- [[./twitter.png]] [[https://twitter.com/knmsyk][knmsyk]]

@@ -4,11 +4,11 @@ iOS/Android app developer
 -   Emacs
 
 -   Swift
--   Objective-C
--   Java
+-   Kotlin
 -   Elixir
 -   Ruby
 -   Racket
 -   Standard ML
 
--   [knmsyk](https://twitter.com/knmsyk)
+-   kounomasayuki [![img](./gmail.png)](mailto:kounomasayuki@gmail.com)
+-   knmsyk [![img](./twitter.png)](https://twitter.com/knmsyk)

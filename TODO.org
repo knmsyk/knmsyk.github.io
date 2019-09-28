@@ -19,7 +19,7 @@ CLOSED: [2019-09-28 Sat 16:24]
       - Email kn@msyk.works
       - GitHub
 - [X] Download vcf
-- [ ] Language setting
+- [X] Language setting
 - [ ] Portfolio www.msyk.works
   - Dots
   - Eny

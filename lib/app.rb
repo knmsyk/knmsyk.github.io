@@ -1,12 +1,20 @@
 require 'sinatra'
 require 'slim'
 require 'octicons'
+require 'sinatra/r18n'
+
+R18n::I18n.default = 'en'
 
 helpers do
   def octicon(symbol, options = {})
     icon = Octicons::Octicon.new(symbol, options)
     icon.to_svg
   end
+end
+
+before do
+  p request.env["HTTP_ACCEPT_LANGUAGE"].start_with? 'ja'
+  session[:locale] = 'ja' if request.env["HTTP_ACCEPT_LANGUAGE"].start_with? 'ja'
 end
 
 get '/' do

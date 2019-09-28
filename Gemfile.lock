@@ -12,6 +12,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     octicons (9.1.1)
       nokogiri (>= 1.6.3.1)
+    r18n-core (3.2.0)
     rack (2.0.7)
     rack-protection (2.0.7)
       rack
@@ -26,6 +27,9 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.7)
       tilt (~> 2.0)
+    sinatra-r18n (3.2.0)
+      r18n-core (= 3.2.0)
+      sinatra (>= 1.3, < 3)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
@@ -39,6 +43,7 @@ DEPENDENCIES
   octicons
   rerun
   sinatra
+  sinatra-r18n
   slim
 
 RUBY VERSION

@@ -1,15 +1,22 @@
-.row
-  .col
-    h2= t.name
-    p= t.title
-
-    ul
-      li
-        a href="mailto:kn@msyk.works"
-          == octicon("mail", height: 32)
-      li
-        a href="https://github.com/knmsyk"
-          == octicon("mark-github", height: 32)
-      li
-        a href="/files/msyk.vcf"
-          == octicon("cloud-download", height: 32)
+.namecard.vw-100.vh-100.p-5
+  .row.h-50
+    .col
+      .download
+        .text-right
+          a href="/files/msyk.vcf"
+            == octicon "cloud-download"
+  .row.h-50
+    .col
+      .row
+        .col
+          h2= t.name
+          p= t.title
+      .row
+        .col
+          .links
+            .email.d-inline-flex
+              a href="mailto:kn@msyk.works"
+                == octicon "mail"
+            .github.d-inline-flex
+              a href="https://github.com/knmsyk"
+                == octicon "mark-github"

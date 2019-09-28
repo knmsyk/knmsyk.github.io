@@ -1,4 +1,25 @@
-body {
-  background-color: #fff; }
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: #01004D; }
+
+  .octicon {
+    color: #01004D; } }
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #002b36;
+    color: #93a1a1; }
+
+  .octicon {
+    color: #93a1a1; } }
+@media (prefers-color-scheme: no-preference) {
+  body {
+    background: #fff;
+    color: #01004D; }
+
+  .octicon {
+    color: #01004D; } }
+.octicon {
+  fill: currentColor; }
 
 /*# sourceMappingURL=layout.css.map */

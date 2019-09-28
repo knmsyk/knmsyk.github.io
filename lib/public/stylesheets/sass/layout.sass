@@ -1,2 +1,17 @@
-body
-  background-color: #fff
+=coloring($primary-color, $base-color)
+  body
+    background: $base-color
+    color: $primary-color
+  .octicon
+    color: $primary-color
+
+$themes: light, dark, no-preference
+@each $theme in $themes
+  @media (prefers-color-scheme: $theme)
+    @if $theme == dark
+      +coloring(#93a1a1, #002b36)
+    @else
+      +coloring(#01004D, #fff)
+
+.octicon
+  fill: currentColor

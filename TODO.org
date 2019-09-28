@@ -1,25 +1,27 @@
 * msyk.works
-** TODO Setup
+** DONE Setup
+CLOSED: [2019-09-28 Sat 16:24]
 *** DONE Heroku
 CLOSED: [2019-09-28 Sat 15:47]
 - [X] Deploy
 - [X] DNS
-*** App
+*** DONE App
+CLOSED: [2019-09-28 Sat 16:24]
 - [X] Create Sinatra app
-- [ ] Bootstrap
-- [ ] Iconic
+- [X] Bootstrap
+- [X] octicons
 ** TODO Design
-- [ ] Contents
-  - [ ] Name card /www.msyk.works/namecard
+- [X] Contents
+  - [X] Name card /www.msyk.works/namecard
     - Masayuki Kouno
     - iOS app creater
     - SNS
-      - Twitter
+      - Email kn@msyk.works
       - GitHub
+- [ ] Language setting
 - [ ] Portfolio www.msyk.works
   - Dots
   - Eny
-- [ ] Language setting
 - [ ] Theme switch
   - https://github.com/coliff/dark-mode-switch
 ** TODO Impl

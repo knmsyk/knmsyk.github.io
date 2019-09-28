@@ -1,5 +1,13 @@
 require 'sinatra'
 require 'slim'
+require 'octicons'
+
+helpers do
+  def octicon(symbol, options = {})
+    icon = Octicons::Octicon.new(symbol, options)
+    icon.to_svg
+  end
+end
 
 get '/' do
   slim :index

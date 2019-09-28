@@ -1,10 +1,11 @@
 * msyk.works
 ** TODO Setup
-*** Heroku
-- [ ] Deploy
-- [ ] DNS
+*** DONE Heroku
+CLOSED: [2019-09-28 Sat 15:47]
+- [X] Deploy
+- [X] DNS
 *** App
-- [ ] Create Sinatra app
+- [X] Create Sinatra app
 - [ ] Bootstrap
 - [ ] Iconic
 ** TODO Design
@@ -16,9 +17,11 @@
       - Twitter
       - GitHub
 - [ ] Portfolio www.msyk.works
-    - Dots
-    - Eny
+  - Dots
+  - Eny
 - [ ] Language setting
+- [ ] Theme switch
+  - https://github.com/coliff/dark-mode-switch
 ** TODO Impl
 - [ ] namecard
 - [ ] portfolio

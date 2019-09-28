@@ -18,12 +18,14 @@ CLOSED: [2019-09-28 Sat 16:24]
     - SNS
       - Email kn@msyk.works
       - GitHub
+- [X] Download vcf
 - [ ] Language setting
 - [ ] Portfolio www.msyk.works
   - Dots
   - Eny
 - [ ] Theme switch
   - https://github.com/coliff/dark-mode-switch
+- [ ] 404
 ** TODO Impl
 - [ ] namecard
 - [ ] portfolio

@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.14.6//EN
+N:Masayuki;Kouno;;;
+FN:Kouno Masayuki
+ORG:msyk;
+EMAIL;type=INTERNET;type=WORK;type=pref:kn@msyk.works
+item1.URL;type=pref:https://www.msyk.works/namecard
+item1.X-ABLabel:_$!<HomePage>!$_
+UID:721f36db-74ba-40b6-81d9-3e2e642fcf89
+X-ABUID:55229AE1-64CE-4672-8353-CF78FF6867F1:ABPerson
+END:VCARD

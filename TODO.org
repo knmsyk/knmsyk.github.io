@@ -1,6 +1,6 @@
 * msyk.works
 ** TODO Setup
-*** GCP
+*** Heroku
 - [ ] Deploy
 - [ ] DNS
 *** App

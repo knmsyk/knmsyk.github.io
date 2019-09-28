@@ -1,0 +1,24 @@
+* msyk.works
+** TODO Setup
+*** GCP
+- [ ] Deploy
+- [ ] DNS
+*** App
+- [ ] Create Sinatra app
+- [ ] Bootstrap
+- [ ] Iconic
+** TODO Design
+- [ ] Contents
+  - [ ] Name card /www.msyk.works/namecard
+    - Masayuki Kouno
+    - iOS app creater
+    - SNS
+      - Twitter
+      - GitHub
+- [ ] Portfolio www.msyk.works
+    - Dots
+    - Eny
+- [ ] Language setting
+** TODO Impl
+- [ ] namecard
+- [ ] portfolio

@@ -13,7 +13,6 @@ helpers do
 end
 
 before do
-  p request.env["HTTP_ACCEPT_LANGUAGE"].start_with? 'ja'
   session[:locale] = 'ja' if request.env["HTTP_ACCEPT_LANGUAGE"].start_with? 'ja'
 end
 

@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/ruby,osx
-# Edit at https://www.gitignore.io/?templates=ruby,osx
+# Created by https://www.gitignore.io/api/ruby,sass,osx
+# Edit at https://www.gitignore.io/?templates=ruby,sass,osx
 
 ### OSX ###
 # General
@@ -84,4 +84,10 @@ build-iPhoneSimulator/
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
 
-# End of https://www.gitignore.io/api/ruby,osx
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# End of https://www.gitignore.io/api/ruby,sass,osx

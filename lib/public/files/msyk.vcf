@@ -5,8 +5,15 @@ N:Masayuki;Kouno;;;
 FN:Kouno Masayuki
 ORG:msyk;
 EMAIL;type=INTERNET;type=WORK;type=pref:kn@msyk.works
-item1.URL;type=pref:https://www.msyk.works/namecard
+X-SOCIALPROFILE;type=facebook:http://facebook.com/kounomasayuki
+X-SOCIALPROFILE;type=twitter:http://twitter.com/knmsyk
+item1.URL;type=pref:https://www.msyk.works
 item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL:https://www.msyk.works/namecard
+item2.X-ABLabel:namecard
+item3.URL:https://github.com/knmsyk
+item3.X-ABLabel:GitHub
 UID:721f36db-74ba-40b6-81d9-3e2e642fcf89
 X-ABUID:55229AE1-64CE-4672-8353-CF78FF6867F1:ABPerson
+X-IMAGETYPE:PHOTO
 END:VCARD

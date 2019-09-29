@@ -27,5 +27,5 @@ CLOSED: [2019-09-28 Sat 16:24]
   - Eny
 - [ ] 404
 ** TODO Impl
-- [ ] namecard
+- [X] namecard
 - [ ] portfolio

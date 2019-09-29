@@ -20,11 +20,11 @@ CLOSED: [2019-09-28 Sat 16:24]
       - GitHub
 - [X] Download vcf
 - [X] Language setting
+- [X] Theme switch
+  - https://github.com/coliff/dark-mode-switch
 - [ ] Portfolio www.msyk.works
   - Dots
   - Eny
-- [ ] Theme switch
-  - https://github.com/coliff/dark-mode-switch
 - [ ] 404
 ** TODO Impl
 - [ ] namecard

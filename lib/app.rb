@@ -20,6 +20,10 @@ get '/' do
   slim :index
 end
 
-get '/namecard' do
-  slim :'namecard/index'
+get '/card' do
+  slim :'card/index'
+end
+
+get '/', host: 'card.msyk.works' do
+  slim :'card/index'
 end

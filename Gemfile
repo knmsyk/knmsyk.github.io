@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'sinatra-r18n'
+gem 'sinatra-subdomain'
 gem 'slim'
 gem 'sass'
 gem 'octicons'

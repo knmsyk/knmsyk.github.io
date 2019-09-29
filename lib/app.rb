@@ -1,7 +1,8 @@
 require 'sinatra'
+require 'sinatra/r18n'
+require "sinatra/subdomain"
 require 'slim'
 require 'octicons'
-require 'sinatra/r18n'
 
 R18n::I18n.default = 'en'
 
@@ -16,14 +17,12 @@ before do
   session[:locale] = 'ja' if request.env["HTTP_ACCEPT_LANGUAGE"].start_with? 'ja'
 end
 
+subdomain :card do
+  get '/' do
+    slim :'card/index'
+  end
+end
+
 get '/' do
   slim :index
-end
-
-get '/card' do
-  slim :'card/index'
-end
-
-get '/', host: 'card.msyk.works' do
-  slim :'card/index'
 end

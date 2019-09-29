@@ -3,13 +3,13 @@
     .col
       .download
         .text-right
-          a href="/files/msyk.vcf"
+          a href="/vcf"
             == octicon "cloud-download", height: 24
   .row
     .col.mx-auto style="max-width:12cm;max-height:8cm;"
       .row
         .col
-          h1.font-weight-lighter= t.name
+          h1.font-weight-lighter= t.name.format t.name.family, t.name.first
           p.font-weight-light= t.title
       .row
         - [{href: "mailto:kn@msyk.works", icon: "mail"}, {href: "https://github.com/knmsyk", icon: "mark-github"}].each do |link|

@@ -1,2 +1,6 @@
-name: '河野 正行'
-title: 'iOS アプリ デザインエンジニア'
+name:
+  format: '%1 %2'
+  family: 河野
+  first: 正行
+title: iOS アプリ デザインエンジニア
+org: フリーランス

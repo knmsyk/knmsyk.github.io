@@ -21,6 +21,12 @@ subdomain :card do
   get '/' do
     slim :'card/index'
   end
+
+  get '/vcf' do
+    content_type 'text/x-vcard'
+    attachment 'msyk.vcf'
+    slim :'card/vcf', layout: false
+  end
 end
 
 get '/' do

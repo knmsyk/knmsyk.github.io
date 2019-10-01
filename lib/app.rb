@@ -1,8 +1,10 @@
+# coding: utf-8
 require 'sinatra'
 require 'sinatra/r18n'
 require "sinatra/subdomain"
 require 'slim'
 require 'octicons'
+require './lib/models/product'
 
 R18n::I18n.default = 'en'
 
@@ -10,6 +12,10 @@ helpers do
   def octicon(symbol, options = {})
     icon = Octicons::Octicon.new(symbol, options)
     icon.to_svg
+  end
+
+  def partial(page, options={})
+    slim page.to_sym, options.merge!(:layout => false)
   end
 end
 
@@ -30,5 +36,9 @@ subdomain :card do
 end
 
 get '/' do
-  slim :index
+  products = [
+    Product.new("Dots", "./images/dots.png", "iOS", "Coming in Spring 2020", "parts/dots-text", "parts/dots-quote"),
+    Product.new("eny", "./images/eny.png", "iOS", "Coming in Summer 2020", "parts/eny-text", "parts/eny-quote"),
+  ]
+  slim :index, locals: {products: products}
 end

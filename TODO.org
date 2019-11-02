@@ -10,7 +10,8 @@ CLOSED: [2019-09-28 Sat 16:24]
 - [X] Create Sinatra app
 - [X] Bootstrap
 - [X] octicons
-** TODO Design
+** DONE Design
+CLOSED: [2019-10-15 Tue 18:07]
 - [X] Contents
   - [X] Name card /www.msyk.works/namecard
     - Masayuki Kouno
@@ -22,10 +23,11 @@ CLOSED: [2019-09-28 Sat 16:24]
 - [X] Language setting
 - [X] Theme switch
   - https://github.com/coliff/dark-mode-switch
-- [ ] Portfolio www.msyk.works
+- [X] Portfolio www.msyk.works
   - Dots
   - Eny
 - [ ] 404
-** TODO Impl
+** DONE Impl
+CLOSED: [2019-10-15 Tue 18:07]
 - [X] namecard
-- [ ] portfolio
+- [X] portfolio

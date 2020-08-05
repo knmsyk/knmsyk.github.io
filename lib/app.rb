@@ -43,6 +43,23 @@ get '/' do
   slim :index, locals: {products: products}
 end
 
-get '/privacypolicy' do
-  slim :privacypolicy
+subdomain :dots do
+  get '/privacypolicy' do
+    slim :privacypolicy, locals: {name: "Dots app"}
+  end
+
+  get '/termsandconditions' do
+    slim :termsandconditions, locals: {name: "Dots app"}
+  end
 end
+
+subdomain :eny do
+  get '/privacypolicy' do
+    slim :privacypolicy, locals: {name: "eny app"}
+  end
+
+  get '/termsandconditions' do
+    slim :termsandconditions, locals: {name: "eny app"}
+  end
+end
+

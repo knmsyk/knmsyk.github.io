@@ -42,3 +42,7 @@ get '/' do
   ]
   slim :index, locals: {products: products}
 end
+
+get '/privacypolicy' do
+  slim :privacypolicy
+end

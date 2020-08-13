@@ -31,3 +31,20 @@ CLOSED: [2019-10-15 Tue 18:07]
 CLOSED: [2019-10-15 Tue 18:07]
 - [X] namecard
 - [X] portfolio
+** TODO Survey other services
+- https://apps.apple.com/jp/app/カコミエール/id1209448062
+- https://apps.apple.com/jp/app/jumbo-privacy-assistant/id1454039975
+- https://apps.apple.com/jp/app/日記帳-10年日記/id695090127
+- https://apps.apple.com/jp/app/timehop-memories-then-now/id569077959
+- https://apps.apple.com/jp/app/diaro-diary-journal-notes/id882519460?mt=8
+- http://corp.excite.co.jp/press/hibee20170331/
+- https://mag.app-liv.jp/archive/124155/
+*** eny
+- https://apps.apple.com/jp/app/spher-all-social-media-apps-in-one-app-free/id1100690019
+- https://apps.apple.com/jp/app/socialz/id1095664860
+- https://apps.apple.com/jp/app/social-media-connect/id103119399
+- https://apps.apple.com/jp/app/social/id930384019
+- https://apps.apple.com/jp/app/feeds/id912292155
+- https://apps.apple.com/jp/app/socialapps-ソーシャルメディアのハブ/id634418718
+- https://apps.apple.com/jp/app/onesocial-combining-all-social-feeds-into-one/id945315793
+

@@ -6,6 +6,7 @@ gem 'sinatra-r18n'
 gem 'sinatra-subdomain'
 gem 'slim'
 gem 'sassc'
+gem 'sprockets-helpers'
 gem 'octicons'
 
 group :development do

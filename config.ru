@@ -1,2 +1,5 @@
 require './lib/app'
-run Sinatra::Application
+map App.assets_prefix do
+  run App.sprockets
+end
+run App

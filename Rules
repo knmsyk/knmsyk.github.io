@@ -18,6 +18,13 @@ compile '/**/*.slim' do
   end
 end
 
+compile '/**/*.md' do
+  filter :kramdown
+  layout '/doc.*'
+  layout '/default.*'
+  write item.identifier.without_ext + '/index.html'
+end
+
 compile '/**/*' do
   write item.identifier.to_s
 end

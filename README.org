@@ -1,8 +1,0 @@
-* msyk.works
-** URL
-https://www.msyk.works
-** run
-#+BEGIN_SRC sh
-$ bundle exec rerun 'ruby lib/app.rb'
-$ bundle exec sass --watch lib/public/stylesheets/sass/:lib/public/stylesheets/
-#+END_SRC

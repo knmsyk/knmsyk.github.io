@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'sinatra-r18n'
-gem 'sinatra-subdomain'
+gem 'nanoc'
 gem 'slim'
-gem 'sassc'
-gem 'sprockets-helpers'
+gem 'sass'
+gem 'scss'
 gem 'octicons'
 
-group :development do
-  gem 'rerun'
+group 'nanoc' do
+  gem 'nanoc-live'
 end

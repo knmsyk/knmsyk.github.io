@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+passthrough '/assets/images/**/*'
+
+compile '/**/*.scss' do
+  filter :sass, syntax: :scss, style: :compact
+  filter :relativize_paths, type: :css
+  write ext: '.css'
+end
+
+compile '/**/*.slim' do
+  filter :slim
+  layout '/default.*'
+  if item.identifier =~ '**/index.*'
+    write ext: '.html'
+  else
+    write item.identifier.without_ext + '/index.html'
+  end
+end
+
+compile '/**/*' do
+  write item.identifier.to_s
+end
+
+layout '/**/*.slim', :slim

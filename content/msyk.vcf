@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Mac OS X 10.14.6//EN
+N:Kouno;Masayuki;;;
+FN:Masayuki Kouno
+ORG:Freelance;
+EMAIL;type=INTERNET;type=WORK;type=pref:kouno@msyk.works
+X-SOCIALPROFILE;type=facebook:http://facebook.com/kounomasayuki
+X-SOCIALPROFILE;type=twitter:http://twitter.com/knmsyk
+item1.URL;type=pref:https://www.msyk.works
+item1.X-ABLabel:_$!<HomePage>!$_
+item2.URL:https://www.msyk.works/card/
+item2.X-ABLabel:card
+item3.URL:https://github.com/knmsyk
+item3.X-ABLabel:GitHub
+UID:eedc1a51-cb97-4700-ae9d-ee51e3468de7
+X-ABUID:D34AFF61-25FE-459E-A662-9480C8E0FDE1:ABPerson
+END:VCARD

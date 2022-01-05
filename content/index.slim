@@ -5,21 +5,16 @@
   .row.justify-content-between
     - products.each do |product|
       .col-12.col-md-6.p-0.p-md-3
-        img.img-fluid src=image_path(product.cover) alt=product.name
+        img.img-fluid src=@items["/assets/images/#{product.cover}"].path alt=product.name
         .p-3
-          pre.pre-wrap.m-3.text-secondary.font-weight-light.font-italic= partial product.quote
-          pre.pre-wrap.text-decoration-none= partial product.text
+          pre.pre-wrap.m-3.text-secondary.font-weight-light.font-italic= render "/#{product.quote}.*"
+          pre.pre-wrap.text-decoration-none= render "/#{product.text}.*"
           ul.list-group.list-group-flush.mt-2
             - [product.platform, product.release].each do |item|
               li.list-group-item.bg-transparent.border-light.p-1
                 small= item
       .w-100.d-md-none
         hr.invisible
-  / .jumbotron.jumbotron-fluid
-  /    .container
-  /      h1.display-4 Early access
-  /      p.lead Register now
   .row
     .col.text-center
-      a.text-secondary href="https://card.msyk.works" Contact
-
+      a.text-secondary href="./card" Contact

@@ -1,4 +1,4 @@
-@mixin coloring($foreground-color, $base-color) {
+@mixin coloring($foreground-color, $secondary-color, $base-color) {
   body {
     background: $base-color;
     color: $foreground-color;
@@ -6,22 +6,29 @@
   pre, .octicon {
     color: $foreground-color;
   }
+  .list-group-flush > li {
+    border-color: $secondary-color!important;
+  }
 }
 
 $themes: light, dark, no-preference;
 @each $theme in $themes {
   @media (prefers-color-scheme: $theme) {
     @if $theme == dark {
-      @include coloring(#93a1a1, #002b36);
+      @include coloring(#93a1a1, #93a1a133, #002b36);
     }
     @else {
-      @include coloring(#01004D, #fff);
+      @include coloring(#01004d, #01004d33, #fff);
     }
   }
 }
 
 .octicon {
   fill: currentColor;
+}
+
+li > p {
+  margin-bottom: 0;
 }
 
 .pre-wrap {

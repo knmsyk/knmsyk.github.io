@@ -32,3 +32,4 @@ compile '/**/*' do
 end
 
 layout '/**/*.slim', :slim
+layout '/**/*.md', :kramdown

@@ -29,5 +29,8 @@ $themes: light, dark, no-preference;
 }
 
 #card {
-  letter-spacing: 0.04rem;
+  letter-spacing: 0.1rem;
+  .jp {
+      font-family: serif;
+  }
 }

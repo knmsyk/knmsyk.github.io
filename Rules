@@ -10,6 +10,7 @@ end
 
 compile '/**/*.slim' do
   filter :slim
+  layout '/footer.*' unless item.identifier.to_s.start_with?("/card/")
   layout '/default.*'
   if item.identifier =~ '**/index.*'
     write ext: '.html'
@@ -21,6 +22,7 @@ end
 compile '/**/*.md' do
   filter :kramdown
   layout '/doc.*'
+  layout '/footer.*'
   layout '/default.*'
   write item.identifier.without_ext + '/index.html'
 end

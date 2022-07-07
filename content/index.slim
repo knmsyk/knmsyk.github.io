@@ -1,20 +1,12 @@
 .container
   .row
     .col.my-2
-      h1.font-weight-lighter.px-3.px-md-0 msyk works
-  .row.justify-content-between
-    - products.each do |product|
-      .col-12.col-md-6.p-0.p-md-3
-        img.img-fluid.rounded src=@items["/assets/images/#{product.cover}"].path alt=product.name
-        .p-3
-          /pre.pre-wrap.m-3.text-secondary.font-weight-light.font-italic= render "/#{product.quote}.*"
-          == render "/#{product.text}.*"
-          ul.list-group.list-group-flush.mt-2
-            - [product.platform, product.release].each do |item|
-              li.list-group-item.bg-transparent.p-1
-                small= item
-      .w-100.d-md-none
-        hr.invisible
+      h1.font-weight-lighter.px-3.px-md-0 
+        a href="https://github.com/knmsyk" @knmsyk
   .row
-    .col.text-center
-      a.text-secondary href="./card" Contact
+    .col
+      ul
+        li
+          a href="./works" Works 
+        li
+          a href="./card" Contact

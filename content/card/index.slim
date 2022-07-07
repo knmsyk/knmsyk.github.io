@@ -3,7 +3,7 @@
     .col
       .download
         .text-right
-          a href="/msyk.vcf"
+          a href="/assets/vcards/knmsyk.vcf"
             == octicon "download", height: 24
   .row
     .col.mx-auto style="max-width:12cm;max-height:8cm;"
@@ -12,7 +12,7 @@
           p.m-0.p-0.font-weight-lighter= "Masayuki Kouno"
           h1.jp= "河野 正行"
       .row
-        - [{href: "mailto:kouno@msyk.works", icon: "mail"}, {href: "https://github.com/knmsyk", icon: "mark-github"}].each do |link|
+        - [{href: "mailto:kounomasayuki@gmail.com", icon: "mail"}, {href: "https://github.com/knmsyk", icon: "mark-github"}].each do |link|
           .col-1.mr-1
             a href=link[:href]
               == octicon link[:icon], height: 24

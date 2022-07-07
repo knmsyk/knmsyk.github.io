@@ -1,0 +1,17 @@
+@media (prefers-color-scheme: light) { body { background: #fff; color: #01004d; }
+  a, pre, .octicon { color: #01004d; }
+  .list-group-flush > li { border-color: #01004d33 !important; } }
+@media (prefers-color-scheme: dark) { body { background: #002b36; color: #93a1a1; }
+  a, pre, .octicon { color: #93a1a1; }
+  .list-group-flush > li { border-color: #93a1a133 !important; } }
+@media (prefers-color-scheme: no-preference) { body { background: #fff; color: #01004d; }
+  a, pre, .octicon { color: #01004d; }
+  .list-group-flush > li { border-color: #01004d33 !important; } }
+.octicon { fill: currentColor; }
+
+li > p { margin-bottom: 0; }
+
+.pre-wrap { white-space: pre-wrap !important; }
+
+#card { letter-spacing: 0.1rem; }
+#card .jp { font-family: serif; }

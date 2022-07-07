@@ -1,9 +1,6 @@
-# msyk.works
+# knmsyk.github.io
 
-## URL
-https://www.msyk.works
-
-## Build 
+## Build with [nanoc](https://nanoc.app/about/)
 ``` sh
-$ bundle exec [nanoc](https://nanoc.app/about/)
+$ bundle exec nanoc
 ```

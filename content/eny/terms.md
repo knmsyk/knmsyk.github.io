@@ -24,4 +24,4 @@ These terms and conditions are effective as of 2022-01-05
 
 **Contact Us**
 
-If you have any questions or suggestions about my Terms of Service, do not hesitate to contact me at support@msyk.works.
+If you have any questions or suggestions about my Terms of Service, do not hesitate to contact me at msyk.support@icloud.com.

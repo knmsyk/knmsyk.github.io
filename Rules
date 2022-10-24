@@ -23,7 +23,7 @@ compile '/**/*.md' do
   filter :kramdown
   layout '/doc.*'
   layout '/footer.*'
-  layout '/default.*'
+  layout '/inapp.*'
   write item.identifier.without_ext + '/index.html'
 end
 

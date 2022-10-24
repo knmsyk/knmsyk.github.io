@@ -1,0 +1,7 @@
+doctype html
+html
+  head
+    == render "/head.*"
+    link rel="stylesheet" href=@items["/assets/stylesheets/inapp.*"].path media="screen"
+  body
+    == yield

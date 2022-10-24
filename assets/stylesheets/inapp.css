@@ -1,0 +1,6 @@
+@media (prefers-color-scheme: light) { body { background: #fff; color: #01004d; }
+  a { color: #01004d; } }
+@media (prefers-color-scheme: dark) { body { background: #000; color: #93a1a1; }
+  a { color: #93a1a1; } }
+@media (prefers-color-scheme: no-preference) { body { background: #fff; color: #01004d; }
+  a { color: #01004d; } }

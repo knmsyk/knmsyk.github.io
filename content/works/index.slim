@@ -12,6 +12,13 @@
           ul.list-group.list-group-flush.mt-2
             - [product.platform, product.release].each do |item|
               li.list-group-item.bg-transparent.p-1
-                small= item
+                = item
+            - unless product.links.empty?
+              li.list-group-item.bg-transparent.p-1
+                - product.links.each do |link|
+                  a href=link.url target="_blank"
+                    span
+                      = link.title
+                      ==<  octicon "link-external", height: 16
       .w-100.d-md-none
         hr.invisible

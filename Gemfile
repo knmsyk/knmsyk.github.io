@@ -7,7 +7,9 @@ gem 'slim'
 gem 'sass'
 gem 'scss'
 gem 'octicons'
+gem "webrick"
 
 group 'nanoc' do
   gem 'nanoc-live'
 end
+
